@@ -25,7 +25,7 @@ LIBS =
 SRCS = calculate_grades.cpp median.cpp grade.cpp Student_info.cpp
 
 # automatically generated list of object files
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 
 # default target
