@@ -1,0 +1,9 @@
+In the previous section we introduced two key components in context of the image
+classification task:
+
+A (parameterized) score function mapping the raw image pixels to class scores
+(e.g. a linear function)
+A loss function that measured the quality of a particular set of parameters
+based on how well the induced scores agreed with the ground truth labels in the
+training data. We saw that there are many ways and versions of this (e.g.
+Softmax/SVM).
