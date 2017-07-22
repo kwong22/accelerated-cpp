@@ -3,14 +3,15 @@
 // Kelvin Wong
 // kwong691@gmail.com
 //
-// read words from input stream and count them
+// read and count words from input stream
 
-#include "read_words.h"
+#include "read_word.h"
 
 int main() {
-  // store words from input stream
+  // store words from input stream until end of file or Ctrl-D
   std::vector<std::string> words;
-  words = ReadWords(std::cin);
+  while (ReadWord(std::cin, words))
+    ;
 
   typedef std::vector<std::string>::size_type VecSz;
   VecSz size = words.size();
@@ -41,7 +42,7 @@ int main() {
   }
 
   // Report unique words and number of occurrences
-  std::cout << std::endl << "Unique words:" << std::endl;
+  std::cout << std::endl << "Word counts:" << std::endl;
   for (VecSz i = 0; i < unique_words.size(); ++i) {
     std::cout << unique_words[i] << " - " << word_counts[i] << std::endl;
   }

@@ -15,14 +15,14 @@ CFLAGS =
 EXE = count
 
 # space-separated list of user-defined header files
-HDRS = read_words.h
+HDRS = read_word.h
 
 # space-separated list of libraries, if any,
 # each of which should be prefixed with -l
 LIBS =
 
 # space-separated list of source files
-SRCS = count.cpp read_words.cpp
+SRCS = count.cpp read_word.cpp
 
 # automatically generated list of object files
 OBJS = $(SRCS:.cpp=.o)
