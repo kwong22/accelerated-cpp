@@ -13,7 +13,7 @@ struct Student_info {
 };
 
 bool compare(const Student_info&, const Student_info&);
-// don't need parameter names, just a function prototype
+// don't need parameter names for a function prototype
 std::istream& read(std::istream&, Student_info&);
 std::istream& read_hw(std::istream&, std::vector<double>&);
 #endif
