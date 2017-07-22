@@ -9,31 +9,24 @@
 CC = g++
 
 # flags to pass compiler
-CFLAGS = -g
+CFLAGS = -g -std=c++11 -Wall
 
 # name for executable
-EXE = count
+EXE = average
 
 # space-separated list of user-defined header files
-HDRS = read_word.h
+HDRS = 
 
 # space-separated list of libraries, if any,
 # each of which should be prefixed with -l
 LIBS =
 
 # space-separated list of source files
-SRCS = count.cpp read_word.cpp
-
-# automatically generated list of object files
-OBJS = $(SRCS:.cpp=.o)
-
+SRCS = average.cpp
 
 # default target
-$(EXE): $(OBJS) $(HDRS) Makefile
-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
-
-# dependencies 
-$(OBJS): $(HDRS) Makefile
+$(EXE): $(HDRS) Makefile
+	$(CC) $(CFLAGS) -o $@ $(SRCS) $(LIBS)
 
 # housekeeping
 clean:

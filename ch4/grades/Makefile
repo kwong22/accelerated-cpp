@@ -9,7 +9,7 @@
 CC = g++
 
 # flags to pass compiler
-CFLAGS = 
+CFLAGS = -g
 
 # name for executable
 EXE = calculate_grades
@@ -37,4 +37,4 @@ $(OBJS): $(HDRS) Makefile
 
 # housekeeping
 clean:
-	rm -f core $(EXE) *.o
+	rm -f $(EXE) *.o
